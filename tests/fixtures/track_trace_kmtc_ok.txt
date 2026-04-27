@@ -1,0 +1,117 @@
+e-kmtc
+New Booking
+Schedule
+Ongoing
+Freight
+Settlement/Issue
+Cargo Tracking
+API
+EN
+KMTC
+검색
+로그인
+Network
+MENU
+사이트맵 닫기
+New Booking
+New Booking
+Special Cargo
+DG Cargo
+OOG Cargo
+RF DG Pre-Approval
+Cargo Tracking
+Cargo Tracking
+Schedule
+Corridor
+Vessel
+Period
+Freight
+Freight Inquiry
+My Freight
+Customer Service
+Notice
+Network
+Archive
+FAQ
+VOC
+Information
+각종 요청서 양식
+Ongoing
+Ongoing
+Unsolved Task
+My Request
+Settlement/Issue
+Settlement/Issue
+DEM/DET/Freetime
+My Information
+Member Information
+SC Information
+Report
+Setting
+User Manual
+home
+Home
+Cargo Tracking
+Cargo Tracking
+Inquiry	
+B/L No.
+Container No.
+Booking No.
+		Search
+B/L No.
+(Status)	Booking No.	Container No.	Size/Type	CGO	Departure	Arrival	VSL / VOY	Reserve/
+Confirm
+KSP0000464 S/Waybill Issue	BH00000556	20 GP		KHALIFA BIN SALMAN PORT%%BUSAN NEW PORT
+202602231726%%202603290548	BUSAN NEW PORT%%INCHEON
+202603180900%%202603301248	1)GFS GALAXY/02604E%%2)KMTC DALIAN/2603S	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Note that the information after the date of inquiry is an expected scheduled, so it may change due to various circumstances.
+- Especially T/S schedule via Feeder/Rail/Truck could be more changeable.
+- Freetime will be calculated from the date of actual arrival at Place of Delivery
+- For 2nd mother vessels, shipment confirmation is made 1-2 days before departure.
+- Information on land transportation such as railway transportation and feeder vessels, excluding the sea transportation segment, will be provided on the map at a later time.
+
+open
+
+Customer ()
+
+When you log in, e-KMTC
+You can use it.
+
+Login
+
+ReportFreightNotice
+QUICK
+DEM/DET
+Search
+D/O Issue & B/L Status
+PIC Information
+SalesCS (Outbound)DocuCS (Inbound)
+close
+
+15th Fl., Hanjin Bldg., 63, Namdaemun-ro, Jung-gu, Seoul, Republic of Korea TEL : 02-311-6114
+
+2022 KOREA MARINE TRANSPORT CO. LTD
+
+Privacy Policy
+Rejection of E-mail Collection
+CONTACT US

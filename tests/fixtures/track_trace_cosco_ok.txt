@@ -1,0 +1,259 @@
+Cargo Tracking
+B/L No.
+Search
+B/L No
+Booking No
+Print
+Mesaieed, QA
+POR
+Incheon, KR
+FND
+Traffic Term：CY | CY
+20GP*23
+Latest Status
+Terminal Transfer Arrival
+Happened in SH Port Ctn Waigaoqiao Phase I Tml, 2026-03-27 00:30:00
+Selected Service
+Shipment
+Trucking
+Customs
+Warehousing
+Full Chain
+Container
+Customs
+POR
+First POL
+Transshipment
+Transshipment
+Last POD
+FND
+Mesaieed, QA
+Hamad
+Khalifa Port
+Shanghai
+Inchon
+Incheon, KR
+Laden Return Time
+2026-01-21
+09:28:00
+AST
+ATD
+2026-01-27
+19:37:13
+AST
+ATD
+2026-02-15
+07:13:43
+GST
+ATA
+2026-03-21
+03:14:26
+CST
+ETA
+2026-04-29
+02:00:00
+KST
+Estimated cargo available for pickup at destination
+2026-04-29
+02:00:00
+KST
+Transport Detail
+The current phase is at the Ocean stage
+Ocean
+#	
+Container#
+	Transport Mode	Traffic Term	Current Location	
+Latest Status
+ 
+	
+ 
+	
+ 
+	
+ 
+	
+ 
+	
+ 
+
+1	
+CSNU1350770
+	Barge	CY | CY	SH Port Ctn Waigaoqiao Phase I Tml	
+Terminal Transfer Arrival
+At 2026-03-27 00:30:00
+
+2	
+CSNU1841310
+	Barge	CY | CY	SH Port Ctn Waigaoqiao Phase I Tml	
+Terminal Transfer Arrival
+At 2026-03-26 19:45:00
+
+3	
+CSNU2323152
+	Barge	CY | CY	SH Port Ctn Waigaoqiao Phase I Tml	
+Terminal Transfer Arrival
+At 2026-03-26 20:24:00
+
+4	
+CSNU2543115
+	Barge	CY | CY	SH Port Ctn Waigaoqiao Phase I Tml	
+Terminal Transfer Arrival
+At 2026-03-26 23:39:00
+
+5	
+CSNU2591978
+	Barge	CY | CY	SH Port Ctn Waigaoqiao Phase I Tml	
+Terminal Transfer Arrival
+At 2026-03-26 22:58:00
+
+6	
+CSNU2613995
+	Barge	CY | CY	SH Port Ctn Waigaoqiao Phase I Tml	
+Terminal Transfer Arrival
+At 2026-03-26 22:49:00
+
+7	
+CSNU2695036
+	Barge	CY | CY	SH Port Ctn Waigaoqiao Phase I Tml	
+Terminal Transfer Arrival
+At 2026-03-26 23:34:00
+
+8	
+CSNU2781155
+	Barge	CY | CY	SH Port Ctn Waigaoqiao Phase I Tml	
+Terminal Transfer Arrival
+At 2026-03-26 22:23:00
+
+9	
+CXDU2362519
+	Barge	CY | CY	SH Port Ctn Waigaoqiao Phase I Tml	
+Terminal Transfer Arrival
+At 2026-03-26 23:57:00
+
+10	
+FCIU6076976
+	Barge	CY | CY	SH Port Ctn Waigaoqiao Phase I Tml	
+Terminal Transfer Arrival
+At 2026-03-26 20:26:00
+
+11	
+OOCU0512939
+	Barge	CY | CY	SH Port Ctn Waigaoqiao Phase I Tml	
+Terminal Transfer Arrival
+At 2026-03-27 00:13:00
+
+12	
+OOCU1026551
+	Barge	CY | CY	SH Port Ctn Waigaoqiao Phase I Tml	
+Terminal Transfer Arrival
+At 2026-03-26 22:55:00
+
+13	
+OOCU1047847
+	Barge	CY | CY	SH Port Ctn Waigaoqiao Phase I Tml	
+Terminal Transfer Arrival
+At 2026-03-26 22:33:00
+
+14	
+OOCU1068109
+	Barge	CY | CY	SH Port Ctn Waigaoqiao Phase I Tml	
+Terminal Transfer Arrival
+At 2026-03-26 22:58:00
+
+15	
+OOCU1209017
+	Barge	CY | CY	SH Port Ctn Waigaoqiao Phase I Tml	
+Terminal Transfer Arrival
+At 2026-03-26 23:12:00
+
+16	
+OOLU0484200
+	Barge	CY | CY	SH Port Ctn Waigaoqiao Phase I Tml	
+Terminal Transfer Arrival
+At 2026-03-26 20:30:00
+
+17	
+OOLU2171099
+	Barge	CY | CY	SH Port Ctn Waigaoqiao Phase I Tml	
+Terminal Transfer Arrival
+At 2026-03-26 23:06:00
+
+18	
+OOLU2482125
+	Barge	CY | CY	SH Port Ctn Waigaoqiao Phase I Tml	
+Terminal Transfer Arrival
+At 2026-03-26 23:17:00
+
+19	
+TEMU0708910
+	Barge	CY | CY	SH Port Ctn Waigaoqiao Phase I Tml	
+Terminal Transfer Arrival
+At 2026-03-27 00:07:00
+
+20	
+TGBU1147711
+	Barge	CY | CY	SH Port Ctn Waigaoqiao Phase I Tml	
+Terminal Transfer Arrival
+At 2026-03-26 19:58:00
+
+21	
+TIIU2381739
+	Barge	CY | CY	SH Port Ctn Waigaoqiao Phase I Tml	
+Terminal Transfer Arrival
+At 2026-03-26 20:41:00
+
+22	
+TIIU2385436
+	Barge	CY | CY	SH Port Ctn Waigaoqiao Phase I Tml	
+Terminal Transfer Arrival
+At 2026-03-26 20:24:00
+
+23	
+TLLU2598074
+	Barge	CY | CY	SH Port Ctn Waigaoqiao Phase I Tml	
+Terminal Transfer Arrival
+At 2026-03-26 22:34:00
+Schedule Detail
+Vessel	Service / Voyage	POL	Departure Date	POD	Arrival Date
+SPRINTER	
+AGI2
+082E
+	Hamad	
+Expected：2026-01-27 17:00:00
+Actual：2026-01-27 19:37:13
+	Khalifa Port	
+Expected：2026-01-29 11:00:00
+Actual：2026-01-29 08:59:22
+
+CSCL ATLANTIC OCEAN	
+MEX
+064E
+	Khalifa Port	
+Expected：2026-02-15 03:00:00
+Actual：2026-02-15 07:13:43
+	Shanghai	
+Expected：2026-03-21 02:00:00
+Actual：2026-03-21 03:14:26
+
+CONCERTO	
+AK47
+582E
+	Shanghai	
+Expected：2026-04-28 12:00:00
+Actual：Not yet departed from port
+	Inchon	
+Expected：2026-04-29 02:00:00
+Actual：Not yet arrived at port
+BL Information
+POL :
+Hamad-Hamad Port
+POD :
+Inchon-Hanjin Inchon Terminal
+POR :
+Mesaieed, QA
+FND :
+Incheon, KR-Hanjin Inchon Terminal
+B/L Type :
+Original
+B/L Surrendered Status :
+Endorsed Original B/L Received at office Seoul

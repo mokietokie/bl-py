@@ -1,0 +1,700 @@
+검색
+Valued Opinion
+Document Center
+Office & Contact
+Login
+Company Site
+All
+All
+General
+General
+Rate & Tariff
+Rate & Tariff
+Hi Quote
+Hi Quote
+Export
+Export
+Import
+Import
+Invoice Payment
+Invoice Payment
+Vendor Partners
+Vendor Partners
+Information
+Information
+Home
+General
+화물 위치 추적
+화물 위치 추적
+B/L No.
+이전
+DOHA62608100
+다음
+Print
+Tracking Result
+Rollover Alert
+B/L Copy
+Arrival Notice
+DEM/DET
+MESAIEED, QATAR
+HAMAD, QATAR
+BUSAN, KOREA
+	
+Origin
+	
+Loading Port
+	
+T/S Port
+	
+Discharging Port
+	
+Destination
+
+
+Location
+	
+MESAIEED, QATAR
+	
+MESAIEED, QATAR
+	
+HAMAD, QATAR
+	
+BUSAN, KOREA
+	
+BUSAN, KOREA
+
+
+Terminal
+	
+UMM TERMINAL
+	
+UMM TERMINAL
+	
+CONTAINER TERMINAL 1
+	
+HMM PSA NEW-PORT TERMINAL
+	
+HMM PSA NEW-PORT TERMINAL
+
+
+Arrival(ETB)
+	
+	
+2026-01-25 09:00
+	
+2026-01-28 20:16
+	
+2026-03-06 00:08
+	
+2026-03-06 06:47
+
+
+Departure
+	
+2026-01-20 15:00
+	
+2026-01-28 12:18
+	
+2026-02-02 02:12
+	
+	
+
+The arrival date & time at discharging port is set as ETB (Estimated time of Berthing)
+
+Blue : Estimated Date & Time
+
+Red : Actual Date & Time
+
+All dates and times are local dates and times.
+
+Estimated data is given without guarantee and subject to change without prior notice.
+
+If your shipment is blank now, please contact with HMM for more details.
+
+CNTR Type / Size / Qty
+	
+DC20:10
+Excel
+No.
+	
+Container No.
+	
+Trailer No.
+	
+Cargo Type
+	
+Type / Size
+	
+Weight
+	
+B/L No.
+	
+Cell No.
+	
+Service Term
+	
+B/L Status
+	
+Seal No.
+	
+Movement
+	
+Last Movement Date
+	
+CNTR Status
+
+
+1
+	
+KOCU2121672
+	
+	
+DC
+	
+DC/20
+	
+21484
+	
+DOHA62608100
+	
+	
+Free In-CY
+	
+O B/L issued
+tooltip
+	
+25H0964904
+	
+Import Empty Container Returned
+	
+2026-03-09 10:44
+	
+Removed from HMM's Fleet
+
+
+2
+	
+KOCU2092785
+	
+	
+DC
+	
+DC/20
+	
+21601
+	
+DOHA62608100
+	
+	
+Free In-CY
+	
+O B/L issued
+tooltip
+	
+25H0964906
+	
+Import Empty Container Returned
+	
+2026-03-09 10:44
+	
+HMM's Fleet
+
+
+3
+	
+KOCU2123145
+	
+	
+DC
+	
+DC/20
+	
+21221
+	
+DOHA62608100
+	
+	
+Free In-CY
+	
+O B/L issued
+tooltip
+	
+25H0964902
+	
+Import Empty Container Returned
+	
+2026-03-09 10:30
+	
+HMM's Fleet
+
+
+4
+	
+HMMU2091191
+	
+	
+DC
+	
+DC/20
+	
+21678
+	
+DOHA62608100
+	
+	
+Free In-CY
+	
+O B/L issued
+tooltip
+	
+25H0964905
+	
+Import Empty Container Returned
+	
+2026-03-09 10:45
+	
+HMM's Fleet
+
+
+5
+	
+TCLU3374384
+	
+	
+DC
+	
+DC/20
+	
+21559
+	
+DOHA62608100
+	
+	
+Free In-CY
+	
+O B/L issued
+tooltip
+	
+25H0964903
+	
+Import Empty Container Returned
+	
+2026-03-09 10:44
+	
+HMM's Fleet
+
+
+6
+	
+TEMU1650921
+	
+	
+DC
+	
+DC/20
+	
+21741
+	
+DOHA62608100
+	
+	
+Free In-CY
+	
+O B/L issued
+tooltip
+	
+25H0964908
+	
+Import Empty Container Returned
+	
+2026-03-09 11:28
+	
+HMM's Fleet
+
+
+7
+	
+GCXU2149573
+	
+	
+DC
+	
+DC/20
+	
+21829
+	
+DOHA62608100
+	
+	
+Free In-CY
+	
+O B/L issued
+tooltip
+	
+25H0964909
+	
+Import Empty Container Returned
+	
+2026-03-09 10:30
+	
+HMM's Fleet
+
+
+8
+	
+HDMU2831237
+	
+	
+DC
+	
+DC/20
+	
+21674
+	
+DOHA62608100
+	
+	
+Free In-CY
+	
+O B/L issued
+tooltip
+	
+25H0964907
+	
+Import Empty Container Returned
+	
+2026-03-09 10:45
+	
+HMM's Fleet
+
+
+9
+	
+HMMU2245147
+	
+	
+DC
+	
+DC/20
+	
+21725
+	
+DOHA62608100
+	
+	
+Free In-CY
+	
+O B/L issued
+tooltip
+	
+25H0964910
+	
+Import Empty Container Returned
+	
+2026-03-09 10:44
+	
+HMM's Fleet
+
+
+10
+	
+TEMU1648945
+	
+	
+DC
+	
+DC/20
+	
+21585
+	
+DOHA62608100
+	
+	
+Free In-CY
+	
+O B/L issued
+tooltip
+	
+25H0964901
+	
+Import Empty Container Returned
+	
+2026-03-09 11:28
+	
+HMM's Fleet
+
+You can view Track & Trace results when clicking Container number.
+
+Current Location
+Location
+	
+Date / Time
+	
+Status Description
+
+
+BUSAN, KOREA
+	
+2026-03-09 10:44
+	
+Import Empty Container Returned
+
+Blue : Estimated Date & Time
+
+The Status Description is shown per BL basis thus please check the individual container status at DEM/DET menu.
+
+Vessel Movement
+Vessel / Voyage
+	
+Route
+	
+Loading Port
+	
+Departure
+	
+Discharging Port
+	
+Arrival
+
+
+SPIRIT OF CHENNAI 2610W
+	
+FDR
+	
+MESAIEED, QATAR
+	
+2026-01-28 12:18
+	
+HAMAD, QATAR
+	
+2026-01-28 17:18
+
+
+HMM RAON 0023E
+	
+KMP
+	
+HAMAD, QATAR
+	
+2026-02-02 02:12
+	
+BUSAN, KOREA
+	
+2026-03-06 00:08
+
+If your T/S vessel movement is not reflected on HMM website, Please contact HMM
+
+Estimated Date & Time (For feeder services, the connecting vessel and schedule are not yet confirmed. The displayed ETA/ETD is provisional and subject to change)
+
+Red : Actual Date & Time
+
+Customs Status
+Nation / Item
+	
+US / AMS
+	
+Canada / ACI
+	
+EU / ENS
+	
+U.K. / SNS
+	
+China / CAMS
+	
+Japan / AFR
+
+
+Status
+	
+	
+	
+	
+	
+	
+Empty Container Return Location
+Empty Container Return Location
+	
+Address
+
+
+HMM PSA New-port Terminal
+	
+454, Sinhangnam-ro, Gangseo-gu, Busan
+Shipment Progress
+Excel
+Rail ETD/ETA
+View Rail Move
+Transloading Move
+Date
+	
+Time
+	
+Location
+	
+Status Description
+	
+Mode
+
+
+2026-03-09
+	
+10:44
+	
+BUSAN, KOREA
+	
+Import Empty Container Returned
+	
+Truck
+
+
+2026-03-09
+	
+06:37
+	
+BUSAN, KOREA
+	
+Import Truck Gate Out from Terminal
+	
+Truck
+
+
+2026-03-06
+	
+06:47
+	
+BUSAN, KOREA
+	
+Vessel Discharged at POD
+	
+HMM RAON 0023E
+
+
+2026-03-06
+	
+00:08
+	
+BUSAN, KOREA
+	
+Vessel Berthing at POD
+	
+HMM RAON 0023E
+
+
+2026-03-05
+	
+22:08
+	
+BUSAN, KOREA
+	
+Vessel Arrival at POD
+	
+HMM RAON 0023E
+
+
+2026-02-02
+	
+02:12
+	
+HAMAD, QATAR
+	
+Vessel Departure from T/S Port
+	
+HMM RAON 0023E
+
+
+2026-02-01
+	
+12:29
+	
+HAMAD, QATAR
+	
+Vessel Loading at T/S Port
+	
+HMM RAON 0023E
+
+
+2026-01-28
+	
+20:16
+	
+HAMAD, QATAR
+	
+Feeder Discharged at T/S Port
+	
+Feeder
+
+
+2026-01-28
+	
+14:48
+	
+HAMAD, QATAR
+	
+Feeder Arrival at T/S Port
+	
+Feeder
+
+
+2026-01-28
+	
+12:18
+	
+MESAIEED, QATAR
+	
+Feeder Departure from POL
+	
+Feeder
+
+
+2026-01-28
+	
+09:30
+	
+MESAIEED, QATAR
+	
+Feeder Loading at POL
+	
+Feeder
+
+
+2026-01-25
+	
+09:00
+	
+MESAIEED, QATAR
+	
+Export Truck Gate In to Terminal
+	
+Truck
+
+
+2026-01-20
+	
+15:00
+	
+MESAIEED, QATAR
+	
+Export Empty Container Released
+	
+Truck
+
+Tracking results are provided by HMM Co.,Ltd : 2026-04-28 Tuesday 8:7
+
+Top
+Go Back to Mainpage
+
+Need help?
+
+AI Chat Service
+
+이메일무단수집거부
+개인정보처리방침
+© 2023. HMM CO.,LTD. All Rights Reserved.
+linkedin
+Instagram
+Facebook
+Youtube
+Affiliate site
+Washington United Terminals(WUT)
+의왕ICD
+Hyundai Pusan New-Port Terminal (HPNT)
