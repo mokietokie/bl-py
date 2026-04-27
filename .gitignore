@@ -1,4 +1,14 @@
 .worktrees/
-.venv/
 __pycache__/
 *.pyc
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+build/
+dist/
+*.spec.bak
+*.sqlite
+*.sqlite-journal
+.DS_Store
+node_modules/
