@@ -32,3 +32,24 @@ def test_duplicate_bl_returns_409(client):
     client.post("/shipments", json={"bl_no": "BL1"})
     r = client.post("/shipments", json={"bl_no": "BL1"})
     assert r.status_code == 409
+
+
+from openpyxl import Workbook
+
+
+def test_excel_import_export_roundtrip(client, tmp_path):
+    wb = Workbook()
+    ws = wb.active
+    ws.append(["BL번호", "IMO번호", "ETA", "화물위치"])
+    ws.append(["BL1", "111", "", ""])
+    f = tmp_path / "in.xlsx"
+    wb.save(f)
+    with open(f, "rb") as fh:
+        r = client.post("/import/excel", files={"file": ("in.xlsx", fh,
+                       "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")})
+    assert r.status_code == 200
+    assert r.json()["imported"] == 1
+    r = client.get("/export/excel")
+    assert r.status_code == 200
+    assert r.headers["content-type"].startswith("application/")
+    assert len(r.content) > 0

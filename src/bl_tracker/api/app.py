@@ -5,6 +5,7 @@ from fastapi import FastAPI
 from bl_tracker.config import db_path
 from .shipments import router as shipments_router
 from .refresh import router as refresh_router
+from .excel import router as excel_router
 
 
 def build_app(db: Path | None = None) -> FastAPI:
@@ -12,6 +13,7 @@ def build_app(db: Path | None = None) -> FastAPI:
     app.state.db = db or db_path()
     app.include_router(shipments_router)
     app.include_router(refresh_router)
+    app.include_router(excel_router)
     return app
 
 
