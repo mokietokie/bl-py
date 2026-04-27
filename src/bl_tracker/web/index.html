@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>BL Tracker</title>
+<style>
+  body { font-family: -apple-system, sans-serif; margin: 16px; }
+  table { border-collapse: collapse; width: 100%; font-size: 13px; }
+  th, td { border: 1px solid #ddd; padding: 6px 8px; }
+  th { background: #f5f5f5; text-align: left; }
+  tr.changed { background: #ffe6e6; }
+  .toolbar { margin-bottom: 12px; display: flex; gap: 8px; align-items: center; }
+  button { padding: 4px 10px; cursor: pointer; }
+  #progress { font-size: 12px; color: #555; }
+</style>
+</head>
+<body>
+<h1>BL Tracker</h1>
+<div class="toolbar">
+  <button id="btn-add">행 추가</button>
+  <button id="btn-refresh-selected">선택 새로고침</button>
+  <button id="btn-refresh-all">전체 새로고침</button>
+  <input type="file" id="file-import" accept=".xlsx" hidden>
+  <button id="btn-import">엑셀 업로드</button>
+  <button id="btn-export">엑셀 내보내기</button>
+  <span id="progress"></span>
+</div>
+<table id="t">
+  <thead>
+    <tr>
+      <th><input type="checkbox" id="chk-all"></th>
+      <th>BL번호</th><th>IMO</th><th>ETA</th><th>이전 ETA</th>
+      <th>위치</th><th>위경도</th><th>BL갱신</th><th>위치갱신</th>
+      <th>메모</th><th>액션</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+<script src="/static/app.js"></script>
+</body>
+</html>
