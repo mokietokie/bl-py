@@ -14,7 +14,18 @@ def _open_browser():
     webbrowser.open(f"http://{HOST}:{PORT}")
 
 
+def _ensure_chromium():
+    import subprocess, sys
+    try:
+        from playwright.sync_api import sync_playwright
+        with sync_playwright() as p:
+            p.chromium.executable_path  # raises if missing
+    except Exception:
+        subprocess.run([sys.executable, "-m", "playwright", "install", "chromium"], check=False)
+
+
 def main():
+    _ensure_chromium()
     connection.init()  # ensure schema exists
     threading.Thread(target=_open_browser, daemon=True).start()
     uvicorn.run(app, host=HOST, port=PORT, log_level="info")
