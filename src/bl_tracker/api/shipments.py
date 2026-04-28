@@ -19,6 +19,8 @@ class ShipmentPatch(BaseModel):
     bl_no: Optional[str] = None
     imo_no: Optional[str] = None
     memo: Optional[str] = None
+    carrier: Optional[str] = None
+    vessel: Optional[str] = None
 
 
 def _db(req: Request):

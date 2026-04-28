@@ -16,8 +16,8 @@ function rowEl(s = {}) {
   tr.innerHTML = `
     <td><input type="checkbox" class="sel"></td>
     <td contenteditable data-f="bl_no">${s.bl_no ?? ""}</td>
-    <td>${s.carrier ?? ""}</td>
-    <td>${s.vessel ?? ""}</td>
+    <td contenteditable data-f="carrier">${s.carrier ?? ""}</td>
+    <td contenteditable data-f="vessel">${s.vessel ?? ""}</td>
     <td contenteditable data-f="imo_no">${s.imo_no ?? ""}</td>
     <td>${s.eta ?? ""}</td>
     <td>${s.eta_prev_kst ?? ""}</td>
