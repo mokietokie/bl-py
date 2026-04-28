@@ -100,6 +100,14 @@ $("#btn-refresh-all").onclick = () => {
     .map(tr => Number(tr.dataset.id));
   bulk(ids);
 };
+$("#btn-delete-selected").onclick = async () => {
+  const ids = selectedIds();
+  if (!ids.length) { progress.textContent = "선택 없음"; return; }
+  if (!confirm(`${ids.length}건 삭제할까요?`)) return;
+  await Promise.all(ids.map(id => fetch(`/shipments/${id}`, { method: "DELETE" })));
+  progress.textContent = `${ids.length}건 삭제됨`;
+  load();
+};
 $("#chk-all").onchange = (e) => {
   tbody.querySelectorAll(".sel").forEach(c => c.checked = e.target.checked);
 };
