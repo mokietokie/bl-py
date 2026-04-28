@@ -185,7 +185,7 @@ async def _follow_fullscreen(ctx: BrowserContext, result: Page, bl_no: str) -> s
     )
 
 
-async def fetch_eta(bl_no: str, headless: bool = True) -> dict[str, Any]:
+async def fetch_eta(bl_no: str, headless: bool = False) -> dict[str, Any]:
     async with browser_context(headless=headless) as ctx:
         try:
             result = await _submit(ctx, bl_no)
