@@ -9,10 +9,10 @@ async function load() {
   for (const s of rows) tbody.appendChild(rowEl(s));
 }
 
-function rowEl(s) {
+function rowEl(s = {}) {
   const tr = document.createElement("tr");
   if (s.eta_changed) tr.classList.add("changed");
-  tr.dataset.id = s.id;
+  if (s.id != null) tr.dataset.id = s.id;
   tr.innerHTML = `
     <td><input type="checkbox" class="sel"></td>
     <td contenteditable data-f="bl_no">${s.bl_no ?? ""}</td>
@@ -29,20 +29,48 @@ function rowEl(s) {
       <button class="loc">위치새로고침</button>
       <button class="del">삭제</button>
     </td>`;
-  tr.querySelector(".bl").onclick = () => single(s.id, "bl");
-  tr.querySelector(".loc").onclick = () => single(s.id, "loc");
+
+  const syncButtons = () => {
+    const saved = !!tr.dataset.id;
+    tr.querySelector(".bl").disabled = !saved;
+    tr.querySelector(".loc").disabled = !saved;
+  };
+  syncButtons();
+
+  tr.querySelector(".bl").onclick = () => tr.dataset.id && single(Number(tr.dataset.id), "bl");
+  tr.querySelector(".loc").onclick = () => tr.dataset.id && single(Number(tr.dataset.id), "loc");
   tr.querySelector(".del").onclick = async () => {
-    await fetch(`/shipments/${s.id}`, { method: "DELETE" });
+    if (!tr.dataset.id) { tr.remove(); return; }
+    await fetch(`/shipments/${tr.dataset.id}`, { method: "DELETE" });
     load();
   };
+
   tr.querySelectorAll("[contenteditable]").forEach(el => {
     el.addEventListener("blur", async () => {
-      const body = { [el.dataset.f]: el.textContent.trim() };
-      await fetch(`/shipments/${s.id}`, {
-        method: "PUT",
+      const val = el.textContent.trim();
+      if (tr.dataset.id) {
+        await fetch(`/shipments/${tr.dataset.id}`, {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ [el.dataset.f]: val }),
+        });
+        return;
+      }
+      const bl = tr.querySelector('[data-f="bl_no"]').textContent.trim();
+      if (!bl) return;
+      const imo = tr.querySelector('[data-f="imo_no"]').textContent.trim() || null;
+      const memo = tr.querySelector('[data-f="memo"]').textContent.trim() || null;
+      const r = await fetch("/shipments", {
+        method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(body),
+        body: JSON.stringify({ bl_no: bl, imo_no: imo, memo }),
       });
+      if (r.status === 409) { progress.textContent = `중복 BL: ${bl}`; return; }
+      if (!r.ok)            { progress.textContent = `생성 실패: ${r.status}`; return; }
+      const created = await r.json();
+      tr.dataset.id = created.id;
+      syncButtons();
+      progress.textContent = `${bl} 추가됨`;
     });
   });
   return tr;
@@ -58,7 +86,7 @@ async function single(id, target) {
 
 function selectedIds() {
   return [...tbody.querySelectorAll("tr")]
-    .filter(tr => tr.querySelector(".sel").checked)
+    .filter(tr => tr.querySelector(".sel").checked && tr.dataset.id)
     .map(tr => Number(tr.dataset.id));
 }
 
@@ -94,23 +122,18 @@ async function bulk(ids) {
 
 $("#btn-refresh-selected").onclick = () => bulk(selectedIds());
 $("#btn-refresh-all").onclick = () => {
-  const ids = [...tbody.querySelectorAll("tr")].map(tr => Number(tr.dataset.id));
+  const ids = [...tbody.querySelectorAll("tr")]
+    .filter(tr => tr.dataset.id)
+    .map(tr => Number(tr.dataset.id));
   bulk(ids);
 };
 $("#chk-all").onchange = (e) => {
   tbody.querySelectorAll(".sel").forEach(c => c.checked = e.target.checked);
 };
-$("#btn-add").onclick = async () => {
-  const bl = prompt("BL 번호");
-  if (!bl) return;
-  const imo = prompt("IMO 번호 (선택)") || null;
-  const r = await fetch("/shipments", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ bl_no: bl, imo_no: imo }),
-  });
-  if (r.status === 409) alert("중복된 BL");
-  load();
+$("#btn-add").onclick = () => {
+  const tr = rowEl();
+  tbody.appendChild(tr);
+  tr.querySelector('[data-f="bl_no"]').focus();
 };
 $("#btn-import").onclick = () => $("#file-import").click();
 $("#file-import").onchange = async (e) => {
