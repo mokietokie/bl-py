@@ -27,7 +27,9 @@ async def fake_eta_failed(bl):
 
 async def fake_loc_ok(imo):
     return {"status": "ok", "data": {"lat": 35.1, "lon": 129.0,
-            "area": "Off Busan", "vessel": "MV TEST"},
+            "country_ko": "대한민국", "cc": "KR", "nearest_city": "Busan",
+            "location_label": "대한민국 해상 (Busan 인근)",
+            "vessel": "MV TEST"},
             "fetched_at": "2026-04-27T01:00:00Z", "imo": imo}
 
 
@@ -63,10 +65,10 @@ async def test_refresh_bl_failed_keeps_previous(db, monkeypatch):
     assert fresh["eta"] == "KEEP"
 
 
-async def test_refresh_loc_writes_lat_lon_area(db, monkeypatch):
+async def test_refresh_loc_writes_lat_lon_location(db, monkeypatch):
     s = repo.create_shipment(db, bl_no="BL1", imo_no="9999999")
     monkeypatch.setattr(refresh, "_fetch_location", fake_loc_ok)
     await refresh.refresh_loc(db, s["id"])
     fresh = repo.get_shipment(db, s["id"])
     assert abs(fresh["lat"] - 35.1) < 1e-6
-    assert fresh["location"] == "Off Busan"
+    assert fresh["location"] == "대한민국 해상 (Busan 인근)"

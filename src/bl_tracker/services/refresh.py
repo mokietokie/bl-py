@@ -59,13 +59,14 @@ async def refresh_loc(db: Path, shipment_id: int) -> dict[str, Any]:
     if res["status"] != "ok":
         return res
     d = res["data"]
+    location = d.get("location_label") or d.get("area")
     repo.update_shipment(
         db, shipment_id,
         lat=d["lat"], lon=d["lon"],
-        location=d.get("area"),
+        location=location,
         loc_refreshed_at=now_iso,
     )
-    return {"status": "ok", "lat": d["lat"], "lon": d["lon"], "area": d.get("area")}
+    return {"status": "ok", "lat": d["lat"], "lon": d["lon"], "location": location}
 
 
 async def refresh_bulk(db: Path, ids: list[int], targets: list[str],

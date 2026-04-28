@@ -20,7 +20,11 @@ def client(monkeypatch):
 
         async def fake_loc(imo):
             return {"status": "ok",
-                    "data": {"lat": 1.0, "lon": 2.0, "area": "X", "vessel": "v"},
+                    "data": {"lat": 1.0, "lon": 2.0,
+                             "country_ko": "X국", "cc": "XX",
+                             "nearest_city": "Xville",
+                             "location_label": "X국 해상 (Xville 인근)",
+                             "vessel": "v"},
                     "fetched_at": "2026-04-27T01:00:00Z", "imo": imo}
 
         monkeypatch.setattr(refresh_svc, "_fetch_eta", fake_eta)
