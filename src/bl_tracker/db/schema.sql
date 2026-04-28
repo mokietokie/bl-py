@@ -1,6 +1,8 @@
 CREATE TABLE IF NOT EXISTS shipments (
     id              INTEGER PRIMARY KEY AUTOINCREMENT,
     bl_no           TEXT UNIQUE NOT NULL,
+    carrier         TEXT,
+    vessel          TEXT,
     imo_no          TEXT,
     eta             TEXT,
     eta_prev_kst    TEXT,

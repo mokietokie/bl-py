@@ -40,13 +40,15 @@ async def refresh_bl(db: Path, shipment_id: int) -> dict[str, Any]:
     prev = repo.get_eta_snapshot(db, shipment_id, yesterday)
     prev_eta = prev["eta"] if prev else None
     changed = 1 if (prev_eta is not None and prev_eta != new_eta) else 0
-    repo.update_shipment(
-        db, shipment_id,
+    fields = dict(
         eta=new_eta,
         eta_prev_kst=prev_eta,
         eta_changed=changed,
         bl_refreshed_at=now_iso,
     )
+    if res.get("carrier"):
+        fields["carrier"] = res["carrier"]
+    repo.update_shipment(db, shipment_id, **fields)
     return {"status": "ok", "eta": new_eta, "changed": bool(changed)}
 
 
@@ -60,12 +62,14 @@ async def refresh_loc(db: Path, shipment_id: int) -> dict[str, Any]:
         return res
     d = res["data"]
     location = d.get("location_label") or d.get("area")
-    repo.update_shipment(
-        db, shipment_id,
+    fields = dict(
         lat=d["lat"], lon=d["lon"],
         location=location,
         loc_refreshed_at=now_iso,
     )
+    if d.get("vessel"):
+        fields["vessel"] = d["vessel"]
+    repo.update_shipment(db, shipment_id, **fields)
     return {"status": "ok", "lat": d["lat"], "lon": d["lon"], "location": location}
 
 

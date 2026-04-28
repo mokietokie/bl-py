@@ -8,11 +8,22 @@ from bl_tracker.config import db_path
 _SCHEMA = (Path(__file__).parent / "schema.sql").read_text(encoding="utf-8")
 
 
+_MIGRATIONS = (
+    "ALTER TABLE shipments ADD COLUMN carrier TEXT",
+    "ALTER TABLE shipments ADD COLUMN vessel TEXT",
+)
+
+
 def init(path: Path | None = None) -> Path:
     p = path or db_path()
     with sqlite3.connect(p) as conn:
         conn.executescript(_SCHEMA)
         conn.execute("PRAGMA foreign_keys = ON")
+        for stmt in _MIGRATIONS:
+            try:
+                conn.execute(stmt)
+            except sqlite3.OperationalError:
+                pass  # column already exists
     return p
 
 
