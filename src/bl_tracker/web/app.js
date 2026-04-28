@@ -23,27 +23,7 @@ function rowEl(s = {}) {
     <td>${s.lat != null ? s.lat.toFixed(4) + ", " + s.lon.toFixed(4) : ""}</td>
     <td>${s.bl_refreshed_at ?? ""}</td>
     <td>${s.loc_refreshed_at ?? ""}</td>
-    <td contenteditable data-f="memo">${s.memo ?? ""}</td>
-    <td>
-      <button class="bl">BL새로고침</button>
-      <button class="loc">위치새로고침</button>
-      <button class="del">삭제</button>
-    </td>`;
-
-  const syncButtons = () => {
-    const saved = !!tr.dataset.id;
-    tr.querySelector(".bl").disabled = !saved;
-    tr.querySelector(".loc").disabled = !saved;
-  };
-  syncButtons();
-
-  tr.querySelector(".bl").onclick = () => tr.dataset.id && single(Number(tr.dataset.id), "bl");
-  tr.querySelector(".loc").onclick = () => tr.dataset.id && single(Number(tr.dataset.id), "loc");
-  tr.querySelector(".del").onclick = async () => {
-    if (!tr.dataset.id) { tr.remove(); return; }
-    await fetch(`/shipments/${tr.dataset.id}`, { method: "DELETE" });
-    load();
-  };
+    <td contenteditable data-f="memo">${s.memo ?? ""}</td>`;
 
   tr.querySelectorAll("[contenteditable]").forEach(el => {
     el.addEventListener("blur", async () => {
@@ -69,19 +49,10 @@ function rowEl(s = {}) {
       if (!r.ok)            { progress.textContent = `생성 실패: ${r.status}`; return; }
       const created = await r.json();
       tr.dataset.id = created.id;
-      syncButtons();
       progress.textContent = `${bl} 추가됨`;
     });
   });
   return tr;
-}
-
-async function single(id, target) {
-  progress.textContent = `${id} ${target} 갱신중…`;
-  const r = await fetch(`/shipments/${id}/refresh-${target}`, { method: "POST" });
-  const j = await r.json();
-  progress.textContent = `${id} ${target}: ${j.status}`;
-  load();
 }
 
 function selectedIds() {
