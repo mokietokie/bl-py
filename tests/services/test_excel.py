@@ -49,5 +49,19 @@ def test_export_roundtrip(tmp_path, db):
     wb = load_workbook(out)
     ws = wb.active
     headers = [c.value for c in ws[1]]
-    assert headers[:4] == ["BL번호", "IMO번호", "ETA", "화물위치"]
+    assert headers[:6] == ["BL번호", "선사", "선박명", "IMO번호", "ETA", "화물위치"]
     assert ws.cell(row=2, column=1).value == "BL1"
+
+
+def test_export_roundtrip_through_import(tmp_path, db):
+    repo.create_shipment(db, bl_no="BL1", imo_no="111", memo="hi")
+    out = tmp_path / "out.xlsx"
+    excel.export_xlsx(db, out)
+    # wipe DB and re-import the exported file
+    repo.delete_shipment(db, repo.list_shipments(db)[0]["id"])
+    n = excel.import_xlsx(db, out)
+    assert n == 1
+    s = repo.list_shipments(db)[0]
+    assert s["bl_no"] == "BL1"
+    assert s["imo_no"] == "111"
+    assert s["memo"] == "hi"
